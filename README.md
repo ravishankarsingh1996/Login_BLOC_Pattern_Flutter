@@ -1,6 +1,8 @@
 # login_bloc_flutter
 
-A new Flutter application.
+A new Flutter login application implemented using BLOC pattern and RxDart.
+
+![Alt text for your video](https://1.bp.blogspot.com/-lenoLPfGBs8/XC9gQGhWMcI/AAAAAAAATSA/B6xNc88C1NkaIgmN4DQwGjVZdyUhAF5LwCLcBGAs/s320/Screen%2BShot%2B2019-01-04%2Bat%2B7.00.25%2BPM.png)
 
 ## Getting Started
 
