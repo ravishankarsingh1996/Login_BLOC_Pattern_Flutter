@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 
-Color mainBGColor = Color(0xFF652A78);
-Color redColor = Color(0xFFDE3C10);
-Color purpleColor = Color(0xFF8132AD);
-Color cyanColor = Color(0xFF99D5E5);
-Color orangeColor = Color(0xFFE97A4D);
+Color mainBGColor = Colors.amber;
+Color redColor = Colors.greenAccent;
+Color purpleColor = Colors.purpleAccent;
+Color cyanColor = Colors.lightGreenAccent;
+Color orangeColor = Colors.deepOrange;
 
 class CustomPainterBackgroud extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: CustomPaint(
-          painter: MyCustomPainter(),
-          child: Container(
-          ),
-        ),
+    return CustomPaint(
+      painter: MyCustomPainter(),
+      child: Container(
       ),
     );
   }
@@ -25,18 +21,18 @@ class MyCustomPainter extends CustomPainter{
   @override
   void paint(Canvas canvas, Size size) {
   Paint paint = Paint();
-  Path mainBgPath = Path();
+  /*Path mainBgPath = Path();
   mainBgPath.addRect(Rect.fromLTWH(0.0, 0.0, size.width, size.height));
   paint.color = mainBGColor;
-  canvas.drawPath(mainBgPath, paint);
+  canvas.drawPath(mainBgPath, paint);*/
 
 
-  Path purplePath = Path();
+  /*Path purplePath = Path();
   purplePath.lineTo(size.width*.45, 0);
   purplePath.quadraticBezierTo(size.width*.25, size.height*0.3, 0, size.height* 0.55);
   purplePath.close();
   paint.color = purpleColor;
-  canvas.drawPath(purplePath, paint);
+  canvas.drawPath(purplePath, paint);*/
 
   Path redPath = Path();
   redPath.moveTo(size.width  * 0.9, 0.0);
@@ -67,7 +63,6 @@ class MyCustomPainter extends CustomPainter{
 
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
-    // TODO: implement shouldRepaint
-    return null;
+    return true;
   }
 }
